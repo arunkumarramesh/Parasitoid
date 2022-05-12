@@ -1,0 +1,52 @@
+##lectin ase variant calling###
+
+##JD_LECTIN24a_meta-190575385 is folder with all fasta files
+find JD_LECTIN24a_meta-190575385/ -type f -print0 | xargs -0 mv -t .
+
+##Index references, give meaningful (treatment) names to files
+for file in *fa; do bwa index $file; done&
+for file in *fa; do picard-tools CreateSequenceDictionary R=$file O=${file/.fa/.dict}; done&
+for file in *fa; do samtools faidx $file; done&
+awk -F',' 'system("mv " $1 " " $2)' mapping_ids.csv
+mv 65_S65_L001_R2_001.fastq.gz 280_cDNA_meta_5_65_R2.fastq.gz
+
+##BWA mapping to unmodified and modified (containing DGRP SNPs) references
+for file in *_R1.fastq.gz; do bwa mem -M -t 3 2L3717069-3717568_ref_105_208_228_892.fa $file ${file/_R1.fastq.gz/_R2.fastq.gz} 2>paired_map_err | samtools view -Sb - > ${file/_R1.fastq.gz/_ref_105_208_228_892_mapped.bam} 2>map_err; done&
+for file in *_R1.fastq.gz; do bwa mem -M -t 3 alt_136_161_217_280_371_409_427_584_787_820_859.fa $file ${file/_R1.fastq.gz/_R2.fastq.gz} 2>paired_map_err | samtools view -Sb - > ${file/_R1.fastq.gz/_alt_136_161_217_280_371_409_427_584_787_820_859_mapped.bam} 2>map_err; done&
+for file in *_R1.fastq.gz; do bwa mem -M -t 3 alt_350_386_406_627_486.fa $file ${file/_R1.fastq.gz/_R2.fastq.gz} 2>paired_map_err | samtools view -Sb - > ${file/_R1.fastq.gz/_alt_350_386_406_627_486_mapped.bam} 2>map_err; done&
+for file in *_R1.fastq.gz; do bwa mem -M -t 3 alt_437.fa $file ${file/_R1.fastq.gz/_R2.fastq.gz} 2>paired_map_err | samtools view -Sb - > ${file/_R1.fastq.gz/_alt_437_mapped.bam} 2>map_err; done&
+for file in *_R1.fastq.gz; do bwa mem -M -t 3 alt_509.fa $file ${file/_R1.fastq.gz/_R2.fastq.gz} 2>paired_map_err | samtools view -Sb - > ${file/_R1.fastq.gz/_alt_509_mapped.bam} 2>map_err; done&
+for file in *_R1.fastq.gz; do bwa mem -M -t 3 alt_517.fa $file ${file/_R1.fastq.gz/_R2.fastq.gz} 2>paired_map_err | samtools view -Sb - > ${file/_R1.fastq.gz/_alt_517_mapped.bam} 2>map_err; done&
+for file in *_R1.fastq.gz; do bwa mem -M -t 3 alt_822.fa $file ${file/_R1.fastq.gz/_R2.fastq.gz} 2>paired_map_err | samtools view -Sb - > ${file/_R1.fastq.gz/_alt_822_mapped.bam} 2>map_err; done&
+
+##Reorder reads
+for file in *_ref_105_208_228_892_mapped.bam; do picard-tools ReorderSam R=2L3717069-3717568_ref_105_208_228_892.fa I=$file O=${file/.bam/_reorder.bam} 2>reorder_err_1; done&
+for file in *_alt_136_161_217_280_371_409_427_584_787_820_859_mapped.bam; do picard-tools ReorderSam R=alt_136_161_217_280_371_409_427_584_787_820_859.fa I=$file O=${file/.bam/_reorder.bam} 2>reorder_err_1; done&
+for file in *_alt_350_386_406_627_486_mapped.bam; do picard-tools ReorderSam R=alt_350_386_406_627_486.fa I=$file O=${file/.bam/_reorder.bam} 2>reorder_err_1; done&
+for file in *_alt_437_mapped.bam; do picard-tools ReorderSam R=alt_437.fa I=$file O=${file/.bam/_reorder.bam} 2>reorder_err_1; done&
+for file in *_alt_509_mapped.bam; do picard-tools ReorderSam R=alt_509.fa I=$file O=${file/.bam/_reorder.bam} 2>reorder_err_1; done&
+for file in *_alt_517_mapped.bam; do picard-tools ReorderSam R=alt_517.fa I=$file O=${file/.bam/_reorder.bam} 2>reorder_err_1; done&
+for file in *_alt_822_mapped.bam; do picard-tools ReorderSam R=alt_822.fa I=$file O=${file/.bam/_reorder.bam} 2>reorder_err_1; done&
+
+##Process BAM for variant calling
+for file in *_reorder.bam ; do picard-tools AddOrReplaceReadGroups I=$file O=${file/.bam/_readgroup.bam} LB=species PL=illumina PU=1 SM=$file 2>readgroup_err; done&
+for file in *_readgroup.bam; do samtools sort -@ 20 $file >${file/.bam/_sort.bam} 2>sort_err; done&
+for file in *_readgroup_sort.bam ; do picard-tools BuildBamIndex I=$file 2>index_err; done&
+
+##Generate input file lists
+ls *_ref_105_208_228_892_mapped_reorder_readgroup_sort.bam >ref_105_208_228_892_bams.list
+ls *_alt_136_161_217_280_371_409_427_584_787_820_859_mapped_reorder_readgroup_sort.bam >alt_136_161_217_280_371_409_427_584_787_820_859_bams.list
+ls *_alt_350_386_406_627_486_mapped_reorder_readgroup_sort.bam >alt_350_386_406_627_486_bams.list         
+ls *_alt_437_mapped_reorder_readgroup_sort.bam >alt_437_bams.list
+ls *_alt_509_mapped_reorder_readgroup_sort.bam >alt_509_bams.list
+ls *_alt_517_mapped_reorder_readgroup_sort.bam >alt_517_bams.list
+ls *_alt_822_mapped_reorder_readgroup_sort.bam >alt_822_bams.list
+
+##Call variants using HaplotypeCaller
+java -jar /scratch/Arun/Software/GenomeAnalysisTK.jar -T HaplotypeCaller -nct 3 -R 2L3717069-3717568_ref_105_208_228_892.fa -ploidy 2 -I ref_105_208_228_892_bams.list -o HP_ref_105_208_228_892_lectin_ase.vcf 2>HP_err&
+java -jar /scratch/Arun/Software/GenomeAnalysisTK.jar -T HaplotypeCaller -nct 3 -R alt_136_161_217_280_371_409_427_584_787_820_859.fa  -ploidy 2 -I alt_136_161_217_280_371_409_427_584_787_820_859_bams.list -o HP_alt_136_161_217_280_371_409_427_584_787_820_859_lectin_ase.vcf 2>HP_err&
+java -jar /scratch/Arun/Software/GenomeAnalysisTK.jar -T HaplotypeCaller -nct 3 -R alt_350_386_406_627_486.fa  -ploidy 2 -I alt_350_386_406_627_486_bams.list -o HP_alt_350_386_406_627_486_lectin_ase.vcf 2>HP_err&
+java -jar /scratch/Arun/Software/GenomeAnalysisTK.jar -T HaplotypeCaller -nct 3 -R alt_437.fa  -ploidy 2 -I alt_437_bams.list -o HP_alt_437_lectin_ase.vcf 2>HP_err&
+java -jar /scratch/Arun/Software/GenomeAnalysisTK.jar -T HaplotypeCaller -nct 3 -R alt_509.fa  -ploidy 2 -I alt_509_bams.list -o HP_alt_509_lectin_ase.vcf 2>HP_err&
+java -jar /scratch/Arun/Software/GenomeAnalysisTK.jar -T HaplotypeCaller -nct 3 -R alt_517.fa  -ploidy 2 -I alt_517_bams.list -o HP_alt_517_lectin_ase.vcf 2>HP_err&
+java -jar /scratch/Arun/Software/GenomeAnalysisTK.jar -T HaplotypeCaller -nct 3 -R alt_822.fa  -ploidy 2 -I alt_822_bams.list -o HP_alt_822_lectin_ase.vcf 2>HP_err&
