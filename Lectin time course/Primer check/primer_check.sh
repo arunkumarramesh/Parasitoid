@@ -1,3 +1,4 @@
+wget http://dgrp2.gnets.ncsu.edu/data/website/dgrp2.vcf
 vcftools --vcf dgrp2.vcf --indv line_437 --recode-INFO-all --out dgrp2_437 --recode
 vcftools --vcf dgrp2.vcf --indv line_892 --recode-INFO-all --out dgrp2_892 --recode
 bgzip dgrp2_437.recode.vcf&
