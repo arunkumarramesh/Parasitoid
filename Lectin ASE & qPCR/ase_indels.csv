@@ -1,0 +1,21 @@
+﻿line,resistance 486,7bp_ins_1,8bp_ins_2,21bp_ins_3,snp at pos 3 in 21bp indel
+105,0.12,A,A,A,NA
+136,0.01,P,P,P,G
+161,0.05,P,A,P,G
+208,0.05,A,A,A,NA
+217,0.02,P,P,P,A
+228,0.02,A,A,A,NA
+280,0.21,P,P,P,G
+350,0.1,A,A,P,G
+386,0.03,A,A,P,G
+406,0.02,A,A,P,G
+409,0.04,A,P,P,G
+486,0.08,A,P,P,G
+509,0.05,A,P,P,A
+517,0.13,P,A,P,G
+584,0.14,P,A,P,G
+627,0.07,A,A,P,G
+787,0.11,P,P,P,A
+820,0.29,A,P,P,G
+822,0.11,P,A,P,G
+892,0.03,A,A,A,NA
