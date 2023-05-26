@@ -1,0 +1,13 @@
+﻿resistant,susceptible,n,genotype,date,vial
+18,49,67,UAS-lectin-1,2703,1
+5,28,33,UAS-lectin-2,2703,2
+10,26,36,UAS-lectin-1,3003,3
+1,6,7,2Ar5,3003,4
+22,41,63,UAS-lectin-2,3003,5
+1,14,15,2Ar5,3103,6
+2,12,14,UAS-lectin-2,3103,7
+7,19,26,UAS-lectin-1,3103,8
+3,27,30,2Ar5,2704,9
+5,7,12,UAS-lectin-2,2704,10
+7,7,14,UAS-lectin-1,2704,11
+1,23,24,2Ar5,2804,12
