@@ -1,0 +1,161 @@
+"","Var1","Var2","Var3","Freq"
+"1","21 BP Indel","Induced","Alternate allele",12
+"2","3717777_SNP","Induced","Alternate allele",1
+"3","3717785_SNP","Induced","Alternate allele",0
+"4","3717811_SNP","Induced","Alternate allele",0
+"5","3717881_SNP","Induced","Alternate allele",2
+"6","3717889_SNP","Induced","Alternate allele",0
+"7","3717919_SNP","Induced","Alternate allele",11
+"8","3717922_SNP","Induced","Alternate allele",11
+"9","3717941_SNP","Induced","Alternate allele",4
+"10","3717950_SNP","Induced","Alternate allele",11
+"11","3717956_SNP","Induced","Alternate allele",12
+"12","3718030_SNP","Induced","Alternate allele",0
+"13","3718036_SNP","Induced","Alternate allele",8
+"14","3718037_SNP","Induced","Alternate allele",6
+"15","3718049_SNP","Induced","Alternate allele",0
+"16","3718073_SNP","Induced","Alternate allele",0
+"17","3718137_SNP","Induced","Alternate allele",1
+"18","3718144_SNP","Induced","Alternate allele",1
+"19","3718199_SNP","Induced","Alternate allele",0
+"20","3718222_SNP","Induced","Alternate allele",0
+"21","3718266_SNP","Induced","Alternate allele",0
+"22","3718287_SNP","Induced","Alternate allele",0
+"23","3718317_SNP","Induced","Alternate allele",0
+"24","3718337_SNP","Induced","Alternate allele",0
+"25","3718340_SNP","Induced","Alternate allele",1
+"26","3718354_SNP","Induced","Alternate allele",0
+"27","3718388_SNP","Induced","Alternate allele",0
+"28","3718452_SNP","Induced","Alternate allele",0
+"29","3718506_SNP","Induced","Alternate allele",0
+"30","3718528_SNP","Induced","Alternate allele",1
+"31","3718554_SNP","Induced","Alternate allele",0
+"32","3718615_SNP","Induced","Alternate allele",0
+"33","3718624_SNP","Induced","Alternate allele",2
+"34","3718649_SNP","Induced","Alternate allele",0
+"35","3718679_DEL","Induced","Alternate allele",0
+"36","3718701_SNP","Induced","Alternate allele",0
+"37","3718712_SNP","Induced","Alternate allele",0
+"38","3718750_SNP","Induced","Alternate allele",0
+"39","7 BP Indel","Induced","Alternate allele",8
+"40","8 BP Indel","Induced","Alternate allele",8
+"41","21 BP Indel","Not Induced","Alternate allele",4
+"42","3717777_SNP","Not Induced","Alternate allele",0
+"43","3717785_SNP","Not Induced","Alternate allele",0
+"44","3717811_SNP","Not Induced","Alternate allele",0
+"45","3717881_SNP","Not Induced","Alternate allele",4
+"46","3717889_SNP","Not Induced","Alternate allele",0
+"47","3717919_SNP","Not Induced","Alternate allele",4
+"48","3717922_SNP","Not Induced","Alternate allele",4
+"49","3717941_SNP","Not Induced","Alternate allele",2
+"50","3717950_SNP","Not Induced","Alternate allele",3
+"51","3717956_SNP","Not Induced","Alternate allele",3
+"52","3718030_SNP","Not Induced","Alternate allele",0
+"53","3718036_SNP","Not Induced","Alternate allele",0
+"54","3718037_SNP","Not Induced","Alternate allele",0
+"55","3718049_SNP","Not Induced","Alternate allele",0
+"56","3718073_SNP","Not Induced","Alternate allele",0
+"57","3718137_SNP","Not Induced","Alternate allele",0
+"58","3718144_SNP","Not Induced","Alternate allele",0
+"59","3718199_SNP","Not Induced","Alternate allele",0
+"60","3718222_SNP","Not Induced","Alternate allele",0
+"61","3718266_SNP","Not Induced","Alternate allele",0
+"62","3718287_SNP","Not Induced","Alternate allele",0
+"63","3718317_SNP","Not Induced","Alternate allele",4
+"64","3718337_SNP","Not Induced","Alternate allele",0
+"65","3718340_SNP","Not Induced","Alternate allele",0
+"66","3718354_SNP","Not Induced","Alternate allele",3
+"67","3718388_SNP","Not Induced","Alternate allele",3
+"68","3718452_SNP","Not Induced","Alternate allele",4
+"69","3718506_SNP","Not Induced","Alternate allele",0
+"70","3718528_SNP","Not Induced","Alternate allele",0
+"71","3718554_SNP","Not Induced","Alternate allele",0
+"72","3718615_SNP","Not Induced","Alternate allele",0
+"73","3718624_SNP","Not Induced","Alternate allele",0
+"74","3718649_SNP","Not Induced","Alternate allele",0
+"75","3718679_DEL","Not Induced","Alternate allele",0
+"76","3718701_SNP","Not Induced","Alternate allele",0
+"77","3718712_SNP","Not Induced","Alternate allele",0
+"78","3718750_SNP","Not Induced","Alternate allele",0
+"79","7 BP Indel","Not Induced","Alternate allele",0
+"80","8 BP Indel","Not Induced","Alternate allele",0
+"81","21 BP Indel","Induced","Reference allele",0
+"82","3717777_SNP","Induced","Reference allele",11
+"83","3717785_SNP","Induced","Reference allele",12
+"84","3717811_SNP","Induced","Reference allele",12
+"85","3717881_SNP","Induced","Reference allele",6
+"86","3717889_SNP","Induced","Reference allele",11
+"87","3717919_SNP","Induced","Reference allele",0
+"88","3717922_SNP","Induced","Reference allele",0
+"89","3717941_SNP","Induced","Reference allele",7
+"90","3717950_SNP","Induced","Reference allele",0
+"91","3717956_SNP","Induced","Reference allele",0
+"92","3718030_SNP","Induced","Reference allele",12
+"93","3718036_SNP","Induced","Reference allele",3
+"94","3718037_SNP","Induced","Reference allele",3
+"95","3718049_SNP","Induced","Reference allele",12
+"96","3718073_SNP","Induced","Reference allele",12
+"97","3718137_SNP","Induced","Reference allele",11
+"98","3718144_SNP","Induced","Reference allele",11
+"99","3718199_SNP","Induced","Reference allele",12
+"100","3718222_SNP","Induced","Reference allele",12
+"101","3718266_SNP","Induced","Reference allele",12
+"102","3718287_SNP","Induced","Reference allele",12
+"103","3718317_SNP","Induced","Reference allele",12
+"104","3718337_SNP","Induced","Reference allele",12
+"105","3718340_SNP","Induced","Reference allele",11
+"106","3718354_SNP","Induced","Reference allele",12
+"107","3718388_SNP","Induced","Reference allele",12
+"108","3718452_SNP","Induced","Reference allele",12
+"109","3718506_SNP","Induced","Reference allele",12
+"110","3718528_SNP","Induced","Reference allele",11
+"111","3718554_SNP","Induced","Reference allele",12
+"112","3718615_SNP","Induced","Reference allele",12
+"113","3718624_SNP","Induced","Reference allele",9
+"114","3718649_SNP","Induced","Reference allele",12
+"115","3718679_DEL","Induced","Reference allele",12
+"116","3718701_SNP","Induced","Reference allele",12
+"117","3718712_SNP","Induced","Reference allele",12
+"118","3718750_SNP","Induced","Reference allele",12
+"119","7 BP Indel","Induced","Reference allele",4
+"120","8 BP Indel","Induced","Reference allele",4
+"121","21 BP Indel","Not Induced","Reference allele",0
+"122","3717777_SNP","Not Induced","Reference allele",4
+"123","3717785_SNP","Not Induced","Reference allele",4
+"124","3717811_SNP","Not Induced","Reference allele",4
+"125","3717881_SNP","Not Induced","Reference allele",0
+"126","3717889_SNP","Not Induced","Reference allele",4
+"127","3717919_SNP","Not Induced","Reference allele",0
+"128","3717922_SNP","Not Induced","Reference allele",0
+"129","3717941_SNP","Not Induced","Reference allele",0
+"130","3717950_SNP","Not Induced","Reference allele",0
+"131","3717956_SNP","Not Induced","Reference allele",0
+"132","3718030_SNP","Not Induced","Reference allele",4
+"133","3718036_SNP","Not Induced","Reference allele",4
+"134","3718037_SNP","Not Induced","Reference allele",4
+"135","3718049_SNP","Not Induced","Reference allele",4
+"136","3718073_SNP","Not Induced","Reference allele",4
+"137","3718137_SNP","Not Induced","Reference allele",4
+"138","3718144_SNP","Not Induced","Reference allele",4
+"139","3718199_SNP","Not Induced","Reference allele",4
+"140","3718222_SNP","Not Induced","Reference allele",4
+"141","3718266_SNP","Not Induced","Reference allele",4
+"142","3718287_SNP","Not Induced","Reference allele",4
+"143","3718317_SNP","Not Induced","Reference allele",0
+"144","3718337_SNP","Not Induced","Reference allele",4
+"145","3718340_SNP","Not Induced","Reference allele",4
+"146","3718354_SNP","Not Induced","Reference allele",0
+"147","3718388_SNP","Not Induced","Reference allele",0
+"148","3718452_SNP","Not Induced","Reference allele",0
+"149","3718506_SNP","Not Induced","Reference allele",4
+"150","3718528_SNP","Not Induced","Reference allele",4
+"151","3718554_SNP","Not Induced","Reference allele",4
+"152","3718615_SNP","Not Induced","Reference allele",4
+"153","3718624_SNP","Not Induced","Reference allele",4
+"154","3718649_SNP","Not Induced","Reference allele",4
+"155","3718679_DEL","Not Induced","Reference allele",4
+"156","3718701_SNP","Not Induced","Reference allele",4
+"157","3718712_SNP","Not Induced","Reference allele",4
+"158","3718750_SNP","Not Induced","Reference allele",4
+"159","7 BP Indel","Not Induced","Reference allele",4
+"160","8 BP Indel","Not Induced","Reference allele",4
