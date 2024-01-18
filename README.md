@@ -6,4 +6,4 @@ Natural selection has driven the recurrent loss of an immunity gene that protect
 
 Arunkumar, R.\*, Zhou, S.\*, Day, J.P.\*, Bakare, S., Pitton, S., Zhang, Y., Hsing C-Y., O’Boyle, S., Pascual, J., Clark, B., Chandler, R.J., Leitão, A.B., Jiggins, F.M.
  
-doi: https://doi.org/10.1101/2022.05.27.493757
+doi: https://www.pnas.org/doi/10.1073/pnas.2211019120
